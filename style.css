@@ -1,0 +1,220 @@
+/* style.css - Premium Cybersecurity Portfolio Theme */
+
+:root {
+  /* Magenta‑Cyan accent colors */
+  --accent-cyan: #00ffff;
+  --accent-magenta: #ff00ff;
+  --accent-teal: #00ffcc;
+  --bg-dark: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.12);
+  --text-light: #e0e0e0;
+  --text-primary: #ffffff;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* Global resets and typography */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+}
+
+.lead {
+  color: var(--text-primary) !important;
+}
+
+a { color: var(--accent-cyan); text-decoration: none; }
+a:hover { color: var(--accent-teal); }
+
+/* Loading screen */
+#loading-screen {
+    display: none !important;
+    position: fixed;
+    inset: 0;
+    background: var(--bg-dark);
+    z-index: 9999;
+}
+
+[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.aos-init, .aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2);
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #6a11cb);
+  overflow: hidden;
+}
+
+/* Ensure hero content appears above background */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+#particles-js {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+.hero-content h1 {
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--accent-magenta), 0 0 12px var(--accent-cyan);
+}
+#typed {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 8px var(--accent-cyan), 0 0 12px var(--accent-cyan);
+}
+/* Hero neon styling */
+.hero-content h1 {
+  color: var(--text-primary);
+}
+#typed {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 8px var(--accent-cyan), 0 0 12px var(--accent-cyan);
+}
+
+/* Navbar brand neon */
+.navbar-brand {
+  color: var(--accent-cyan) !important;
+  text-shadow: 0 0 6px var(--accent-magenta), 0 0 10px var(--accent-cyan);
+}
+
+
+/* Section padding with dark glass effect */
+.section-padding {
+  /* Darker translucent backdrop for readability */
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 80px 0;
+  backdrop-filter: blur(12px);
+}
+.section-title {
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+  color: var(--accent-magenta);
+  text-shadow: 0 0 6px var(--accent-magenta), 0 0 10px var(--accent-cyan);
+}
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: var(--accent-cyan);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+
+/* Navigation links neon hover */
+.navbar-brand {
+  color: var(--accent-magenta) !important;
+  text-shadow: 0 0 6px var(--accent-magenta), 0 0 10px var(--accent-cyan);
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-light);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--accent-magenta);
+  text-shadow: 0 0 8px var(--accent-magenta), 0 0 12px var(--accent-cyan);
+}
+
+/* Back to top button */
+#backToTop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-cyan);
+  color: #000;
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+#backToTop:hover {
+  background: var(--accent-teal);
+}
+
+/* Social icons hover */
+.social-icons a {
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--accent-cyan);
+}
+
+/* Progress bars */
+.progress-bar {
+  background: var(--accent-cyan);
+}
+
+/* Ensure AOS elements are visible even if AOS fails */
+[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.aos-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+.aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Custom gradient button (updated) */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-magenta), var(--accent-cyan));
+  border: none;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+}
